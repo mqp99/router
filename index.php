@@ -36,6 +36,6 @@
 	</nav>
 	<div id="app"></div>
 	<script src="<?php echo "//{$_SERVER['HTTP_HOST']}"; ?>/assets/js/jquery.min.js" crossorigin></script>
-	<script src="<?php echo "//{$_SERVER['HTTP_HOST']}"; ?>/assets/js/router.js"></script>
+	<script type='module' src="<?php echo "//{$_SERVER['HTTP_HOST']}"; ?>/assets/js/router.min.js"></script>
 </body>
 </html>
