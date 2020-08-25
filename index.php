@@ -16,10 +16,15 @@
 			transform: translate(-50%,-50%);
 		}
 		button {
-			padding: 5px;
+			padding: 10px;
+			color: #555;
+			border: 1px solid #888;
+			background: transparent;
 		}
 		button.current-router {
-			padding: 10px;
+			color: #fff;
+			border: 1px solid;
+			background: #555;
 		}
 	</style>
 </head>

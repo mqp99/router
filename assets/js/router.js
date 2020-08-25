@@ -1,6 +1,6 @@
 $(function() {
     // Khai báo biến
-    const urlPage = 'https://demorouter.herokuapp.com/';
+    const urlPage = window.location.origin + '/';
     const urlHost = window.location.href;
     const urlPathname = window.location.pathname;
     const thumb_img = urlPage + 'assets/imgs/404error.png';
