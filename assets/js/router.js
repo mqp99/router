@@ -83,6 +83,7 @@ $(function() {
     $(document).on('click', '.router-link', function() {
         var routerValue = $(this).attr('router');
         var buttonRemove = $('.router-link').removeClass('current-router');
+        $('.navbar__menu').removeClass('navbar__menu--show');
         var routerLoad = router_EXIST(routerValue);
         var pushState = history.pushState(null, null, routerValue);
     })
