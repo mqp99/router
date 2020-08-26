@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 			.navbar__menu {
 				display: none;
 				position: absolute;
-				top: 50px;
+				top: 60px;
 				left: 0;
 				width: 100%;
 				height: auto;
@@ -53,6 +53,8 @@ h1, h2, h3, h4, h5, h6 {
 				}
 				&--item {
 					width: 100%;
+					padding: 15px 5px;
+					margin-left: 0;
 					display: block;
 				}
 			}

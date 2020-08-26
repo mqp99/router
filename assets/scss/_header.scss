@@ -1,5 +1,5 @@
 $header_bg: #fff;
-$header_height: 50px;
+$header_height: 60px;
 %flexCenter {
 	display: flex;
 	align-items: center;
@@ -14,7 +14,7 @@ $header_height: 50px;
 	border: 1px solid #b8b8b8;
 }
 %buttonLink {
-	font-size: .95em;
+	font-size: 1em;
 	cursor: pointer;
 	margin-left: 5px;
 	padding: 10px 5px;
@@ -29,7 +29,7 @@ header {
 	border-bottom: 1px solid #dedddd;
 	.navbar {
 		@extend %flexCenter;
-		height: $header_height;
+		height: 59px;
 		.navbar__brand {
 			@extend %flexCenter;
 			width: 60px;
@@ -65,11 +65,12 @@ header {
 			&--item {
 				@extend %buttonLink;
 				&:hover {
-					background: #eee;
+					color: #8941ca;
+					background: #8941ca21;
 					border-radius: .25rem;
 				}
 				&.current-router {
-					color: #416bca;
+					color: #8941ca;
 				}
 			}
 		}
