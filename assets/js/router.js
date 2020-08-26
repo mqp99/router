@@ -1,92 +1,94 @@
 $(function() {
-	// Khai báo biến
-	const urlPage = window.location.origin + '/';
-	const urlHost = window.location.href;
-	const urlPathname = window.location.pathname;
-	const thumb_img = urlPage + 'assets/imgs/404error.png';
-	const pathName = (urlHost === urlPage) ? urlPathname : urlPathname.replace(/[/]$/g, '');
-	//console.log(window.location);
-	var routerRes = [{
-			path: '/',
-			url: 'views/home.php',
-			title: 'Home'
-		},
-		{
-			path: '/about',
-			url: 'views/about.php',
-			title: 'About'
-		},
-		{
-			path: '/contact',
-			url: 'views/contact.php',
-			title: 'Contact'
-		},
-		{
-			path: '/search',
-			url: 'views/search.php?q='+urlHost.split('?q=')[1],
-			title: 'Search'
-		}
-	];
-	//
-	function registerRouter(routerRes) {
-		return {
-			routers: [routerRes]
-		};
-	}
-	// Check router exist
-	function checkRouter() {
-		return (registerRouter(routerRes).routers[0].findIndex(findRouter) !== -1) ? routerExist(pathName) : routerNonExist();
+    /**
+     * @license
+     * ROUTER build by (MINH PHAM) 
+     * GITHUB project <https://github.com/mqp99/router>
+     **/
 
-		function findRouter(router, index) {
-			return router.path === pathName;
-		}
-	}
-	// Function router exist
-	function routerExist(pathName) {
-		$.each(registerRouter(routerRes).routers[0], function(index, router) {
-			if (router.path === pathName) {
-				$(`[router='${router.path}']`).addClass('current-router');
-				renderContent(urlPage + router.url, router.title);
-			}
-		})
-	};
-	// Function router not exist
-	function routerNonExist() {
-		$.each(registerRouter(routerRes).routers[0], function(index, router) {
-			if (router.path !== pathName) {
-				document.title = 'Page not found';
-				document.body.innerHTML = `<img class='error' src='${thumb_img}'/>`;
-			}
-		})
-	};
-	// Render if success
-	function renderContent(url, title) {
-		$.ajax({
-			url: url,
-			method: 'GET',
-			/*beforeSend: function() {
-				document.getElementById('app').innerHTML = '<p>Đang tải...</p>';
-			},*/
-			success: function(data) {
-				document.title = title;
-				document.getElementById('app').innerHTML = data;
-			}
-		})
-	};
-	// When back url
-	window.onpopstate = function(event) {
-		$('button').removeAttr('class');
-		$(`[router='${pathName}']`).removeClass('current-router');
-		routerExist(window.location.pathname);
-	};
-	// Button click load router
-	$(document).on('click', 'button', function() {
-		var vRouter = $(this).attr('router'); // Get attr Router
-		var button = $('button').removeAttr('class'); // Remove all class button
-		var loadRouter = routerExist(vRouter); // Add class button selected
-		var pushState = history.pushState(null, null, vRouter); // push url
-	})
-	// Run
-	checkRouter();
+    /** Used urlPage detech page ORIGIN and add to [/] */
+    const urlPage = window.location.origin + '/';
 
+    /** Used urlHost detech location now */
+    const urlHost = window.location.href;
+
+    /** Used urlPathname detech pathName URL */
+    const urlPathname = window.location.pathname;
+
+    /** Used urlPathNameHandling if urlPage !== urlHost url will removed [/] */
+    const urlPathNameHandling = (urlHost === urlPage) ? urlPathname : urlPathname.replace(/[/]$/g, '');
+
+    /** CREATED A ROUTER before register router */
+
+    const ROUTER = function(routerName, routers) {
+        return {
+            routerName: routerName,
+            routers: routers
+        };
+    }
+
+    /** REGISTER A ROUTER new ROUTER */
+
+    var MY_ROUTER = new ROUTER('MY_ROUTER', [{
+        path: '/',
+        url: 'views/home.php',
+        title: 'Trang chủ'
+    }, {
+        path: '/about',
+        url: 'views/about.php',
+        title: 'Giới thiệu'
+    }, {
+        path: '/contact',
+        url: 'views/contact.php',
+        title: 'Liên hệ'
+    }]);
+
+    /**
+     * IF ISSET ROUTER
+     * router_EXIST() is handling if router isset
+     * router_NON_EXIST() is handling if router not isset
+     **/
+
+    var router = (MY_ROUTER.routers.findIndex(router_Check) !== -1) ? router_EXIST(urlPathNameHandling) : router_NON_EXIST();
+
+    /** router_Check check will check MY_ROUTER === pathName */
+
+    function router_Check(router, index) {
+        return router.path === urlPathNameHandling;
+    }
+
+    /** router_EXIST function will handling url */
+
+    function router_EXIST(urlPathNameHandling) {
+        $.each(MY_ROUTER.routers, function(index, router) {
+            if (router.path === urlPathNameHandling) {
+                $.get(urlPage + router.url, function(data) {
+                    document.title = router.title;
+                    document.querySelector('#app').innerHTML = data;
+                    document.querySelector(`[router='${urlPathNameHandling}']`).classList.add('current-router');
+                })
+            }
+        })
+    }
+
+    /** router_NON_EXIST function will redirect url 404 not found */
+
+    function router_NON_EXIST() {
+        $.each(MY_ROUTER.routers, function(index, router) {
+            if (router.path !== urlPathNameHandling) {
+                document.title = 'Page not found';
+                document.body.innerHTML = `<img class='error' src='${urlPage}assets/imgs/404error.png'/>`;
+            }
+        })
+    }
+    $(document).on('click', '.router-link', function() {
+        var routerValue = $(this).attr('router');
+        var buttonRemove = $('.router-link').removeClass('current-router');
+        var routerLoad = router_EXIST(routerValue);
+        var pushState = history.pushState(null, null, routerValue);
+    })
+    window.onpopstate = function(event) {
+        $('.router-link').removeClass('current-router');
+        $(`[router='${urlPathNameHandling}']`).removeClass('current-router');
+        router_EXIST(window.location.pathname);
+    };
 })

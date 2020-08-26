@@ -1,0 +1,117 @@
+$header_bg: #fff;
+$header_height: 50px;
+%flexCenter {
+	display: flex;
+	align-items: center;
+}
+%formInput {
+	padding: 9px 10px;
+	font-size: .95em;
+	width: 100%;
+	border-radius: .25em;
+	border: 1px solid #b8b8b8;
+}
+%buttonLink {
+	font-size: .95em;
+	cursor: pointer;
+	margin-left: 5px;
+	padding: 10px 5px;
+	white-space: nowrap;
+	background: transparent;
+	border: 1px solid transparent;
+}
+header {
+	padding: 0 20px;
+	background: $header_bg;
+	height: $header_height;
+	border-bottom: 1px solid #dedddd;
+	.navbar {
+		@extend %flexCenter;
+		height: $header_height;
+		.navbar__brand {
+			@extend %flexCenter;
+			width: 60px;
+			color: #262626;
+			height: $header_height;
+		}
+		.navbar__search {
+			@extend %flexCenter;
+			width: 300px;
+			color: #262626;
+			height: $header_height;
+			&--box {
+				width: 100%;
+				.form-input	{
+					@extend %formInput;
+				}
+			}
+		}
+		.navbar__menu {
+			@extend %flexCenter;
+			color: #262626;
+			width: calc(100% - 350px);
+			justify-content: flex-end;
+			height: $header_height;
+			&--item {
+				@extend %buttonLink;
+				&:hover {
+					background: #eee;
+					border-radius: .25rem;
+				}
+				&.current-router {
+					color: #416bca;
+				}
+			}
+		}
+		.navbar__toggle {
+			display: none;
+			height: 40px;
+			.navbar__toggle--btn {
+				display: flex;
+				width: 40px;
+				height: 40px;
+				align-items: center;
+				flex-direction: column;
+				@extend %buttonLink;
+				&--active {
+					span.bar-1 {
+						animation: span_nth_1 1s infinite;
+					}
+					span.bar-2 {
+						display: none;
+					}
+					span.bar-3 {
+						animation: span_nth_3 1s infinite;
+					}
+				}
+				span {
+					width: 25px;
+				    height: 1px;
+				    background: #555;
+				    margin-bottom: 8px;
+				    border-bottom: 1px solid;
+				}
+			}
+		}
+	}
+}
+@keyframes span_nth_1 {
+	0% {
+		position: relative;
+		top: 9px;
+		transform: rotate(45deg);
+	}
+	100% {
+		position: relative;
+		top: 9px;
+		transform: rotate(45deg);
+	}
+}
+@keyframes span_nth_3 {
+	0% {
+		transform: rotate(-45deg);
+	}
+	100% {
+		transform: rotate(-45deg);
+	}
+}

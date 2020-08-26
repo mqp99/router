@@ -1,0 +1,77 @@
+* {
+	box-sizing: border-box;
+}
+*:focus {
+	outline: none;
+}
+html ,
+body {
+	margin: 0;
+	padding: 0;
+	color: #262626;
+	font-size: 1em;
+	background: #fff;
+	font-family: 'Roboto', sans-serif;
+}
+p {
+	margin: 0;
+	margin-bottom: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: .5em 0;
+}
+@import 'header';
+/** Mobile Responsive */
+@media (max-width: 739px) {
+	body {
+		background: #fff;
+	}
+	header {
+		position: relative;
+		padding: 0 10px;
+		.navbar {
+			.navbar__brand {
+				width: 55px;
+			}
+			.navbar__search {
+				width: calc(100% - 100px);
+				&--box {
+					.form-input	{
+					}
+				}
+			}
+			.navbar__menu {
+				display: none;
+				position: absolute;
+				top: 50px;
+				left: 0;
+				width: 100%;
+				height: auto;
+				background: #fff;
+				flex-direction: column;
+				&--show {
+					display: flex;
+				}
+				&--item {
+					width: 100%;
+					display: block;
+				}
+			}
+			.navbar__toggle {
+				display: block;
+			}
+		}
+	}
+}
+/** Tablet Responsive */
+@media (min-width: 740px) and (max-width: 1023px) {
+	body {
+		// background: #999;
+	}
+}
+/** PC Responsive */
+@media (min-width: 1024px) {
+	body {
+		// background: #999;
+	}
+}
