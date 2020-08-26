@@ -12,16 +12,15 @@
 <body>
 	<header>
 		<nav class="navbar">
-			<div class="navbar__brand">
+			<div class="navbar__brand router-link" router='/'>
 				<b>DE</b>MO
 			</div>
 			<div class="navbar__search">
 				<div class="navbar__search--box">
-					<input type="text" class="form-input" placeholder="Search...">
+					<input type="text" class="form-input navbar__search--box-input" placeholder="Search...">
 				</div>
 			</div>
 			<div class="navbar__menu">
-				<button class="navbar__menu--item router-link" router='/'>Trang chủ</button>
 				<button class="navbar__menu--item router-link" router='/about'>Giới thiệu</button>
 				<button class="navbar__menu--item router-link" router='/contact'>Liên hệ</button>
 			</div>

@@ -33,6 +33,11 @@ header .navbar .navbar__search--box .form-input {
   background: #fff;
   background-clip: padding-box;
   border: 1px solid #b8b8b8;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+header .navbar .navbar__search--box .form-input:focus {
+  border-color: #8941ca;
+  box-shadow: 0 0 0 0.2rem rgba(137, 65, 202, 0.17);
 }
 
 header .navbar .navbar__toggle .navbar__toggle--btn, header .navbar .navbar__menu--item {
@@ -43,6 +48,11 @@ header .navbar .navbar__toggle .navbar__toggle--btn, header .navbar .navbar__men
   white-space: nowrap;
   background: transparent;
   border: 1px solid transparent;
+}
+header .navbar .navbar__toggle .navbar__toggle--btn:hover, header .navbar .navbar__menu--item:hover {
+  color: #8941ca;
+  background: #8941ca18;
+  border-radius: 0.25rem;
 }
 
 header {
@@ -55,6 +65,7 @@ header .navbar {
   height: 59px;
 }
 header .navbar .navbar__brand {
+  cursor: pointer;
   width: 60px;
   height: 37px;
   color: #fff;
@@ -79,11 +90,6 @@ header .navbar .navbar__menu {
   width: calc(100% - 350px);
   justify-content: flex-end;
   height: 60px;
-}
-header .navbar .navbar__menu--item:hover {
-  color: #8941ca;
-  background: #8941ca21;
-  border-radius: 0.25rem;
 }
 header .navbar .navbar__menu--item.current-router {
   color: #8941ca;

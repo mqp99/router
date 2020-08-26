@@ -40,6 +40,10 @@ $(function() {
         path: '/contact',
         url: 'views/contact.php',
         title: 'Liên hệ'
+    }, {
+        path: '/search',
+        url: 'views/search.php?q='+urlHost.split('?q=')[1],
+        title: 'Tìm kiếm'
     }]);
 
     /**
@@ -66,7 +70,7 @@ $(function() {
                     // document.querySelector('#app').innerHTML = '<p><i>Đang tải...</i></p>';
                     document.title = router.title;
                     document.querySelector('#app').innerHTML = data;
-                    document.querySelector(`[router='${urlPathNameHandling}']`).classList.add('current-router');
+                    $(`[router='${urlPathNameHandling}']`).addClass('current-router');
                 })
             }
         })
