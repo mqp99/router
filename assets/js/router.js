@@ -69,6 +69,8 @@ function renderContent(url, title) {
 };
 // When back url
 window.onpopstate = function(event) {
+    $('button').removeAttr('class');
+    $(`[router='${pathName}']`).removeClass('current-router');
     routerExist(window.location.pathname);
 };
 // Button click load router
