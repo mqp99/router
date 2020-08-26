@@ -1,21 +1,14 @@
-import { registerRouter } from './app.js';
-
-var routerRes = [
-    {
-        path: '/',
-        url: 'views/home.php',
-        title: 'Home'
-    },
-    {
-        path: '/about',
-        url: 'views/about.php',
-        title: 'About'
-    },
-    {
-        path: '/contact',
-        url: 'views/contact.php',
-        title: 'Contact'
-    }
-];
-// run res router
-routerRes = registerRouter(routerRes);
+$(document).on('submit','form',function (e) {
+	valueSearch = $('#q').val();
+	history.pushState('','','search?q='+valueSearch);
+	$.ajax({
+		url: 'views/search.php',
+		method: "get",
+		data:{
+			q: valueSearch
+		},success:function(data){
+			$('#app').html(data);
+		}
+	})
+	return false;
+})
