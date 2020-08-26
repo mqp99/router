@@ -47,7 +47,7 @@ function routerNonExist() {
     $.each(registerRouter(routerRes).routers[0], function(index, router) {
         if (router.path !== pathName) {
             document.title = 'Page not found';
-            document.body.innerHTML = `<img src='${thumb_img}'/>`;
+            document.body.innerHTML = `<img class='error' src='${thumb_img}'/>`;
         }
     })
 };

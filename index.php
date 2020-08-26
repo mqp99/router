@@ -9,7 +9,7 @@
 		body {
 			font-family: sans-serif;
 		}
-		img {
+		img.error {
 			position: fixed;
 			top: 50%;
 			left: 50%;
