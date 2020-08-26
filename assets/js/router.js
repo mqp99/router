@@ -62,13 +62,11 @@ $(function() {
         $.each(MY_ROUTER.routers, function(index, router) {
             if (router.path === urlPathNameHandling) {
                 $.get(urlPage + router.url, function(data) {
-                    document.title = 'Đang tải...';
-                    document.querySelector('#app').innerHTML = '<p><i>Đang tải...</i></p>';
-                    setTimeout(() => {
-                        document.title = router.title;
-                        document.querySelector('#app').innerHTML = data;
-                        document.querySelector(`[router='${urlPathNameHandling}']`).classList.add('current-router');
-                    },1000);
+                    // document.title = 'Đang tải...';
+                    // document.querySelector('#app').innerHTML = '<p><i>Đang tải...</i></p>';
+                    document.title = router.title;
+                    document.querySelector('#app').innerHTML = data;
+                    document.querySelector(`[router='${urlPathNameHandling}']`).classList.add('current-router');
                 })
             }
         })
