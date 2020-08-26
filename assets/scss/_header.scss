@@ -73,45 +73,10 @@ header {
 				align-items: center;
 				flex-direction: column;
 				@extend %buttonLink;
-				&--active {
-					span.bar-1 {
-						animation: span_nth_1 1s infinite;
-					}
-					span.bar-2 {
-						display: none;
-					}
-					span.bar-3 {
-						animation: span_nth_3 1s infinite;
-					}
-				}
-				span {
-					width: 25px;
-				    height: 1px;
-				    background: #555;
-				    margin-bottom: 8px;
-				    border-bottom: 1px solid;
+				i {
+					font-size: 1.3em;
 				}
 			}
 		}
-	}
-}
-@keyframes span_nth_1 {
-	0% {
-		position: relative;
-		top: 9px;
-		transform: rotate(45deg);
-	}
-	100% {
-		position: relative;
-		top: 9px;
-		transform: rotate(45deg);
-	}
-}
-@keyframes span_nth_3 {
-	0% {
-		transform: rotate(-45deg);
-	}
-	100% {
-		transform: rotate(-45deg);
 	}
 }

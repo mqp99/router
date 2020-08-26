@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
 	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/scss/app.css">
 </head>
@@ -26,9 +27,7 @@
 			</div>
 			<div class="navbar__toggle">
 				<button class="navbar__toggle--btn">
-					<span class="bar-1"></span>
-					<span class="bar-2"></span>
-					<span class="bar-3"></span>
+					<i class="fal fa-bars"></i>
 				</button>
 			</div>
 		</nav>
