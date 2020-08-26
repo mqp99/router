@@ -25,8 +25,6 @@ var routerRes = [{
 function registerRouter(routerRes) {
     return { routers: [routerRes] };
 }
-// Run
-checkRouter();
 // Check router exist
 function checkRouter() {
     return (registerRouter(routerRes).routers[0].findIndex(findRouter) !== -1) ? routerExist(pathName) : routerNonExist();
@@ -58,9 +56,9 @@ function renderContent(url, title) {
     $.ajax({
         url: url,
         method: 'GET',
-        beforeSend: function() {
+        /*beforeSend: function() {
             document.getElementById('app').innerHTML = '<p>Đang tải...</p>';
-        },
+        },*/
         success: function(data) {
             document.title = title;
             document.getElementById('app').innerHTML = data;
@@ -80,3 +78,5 @@ $(document).on('click', 'button', function() {
     var loadRouter = routerExist(vRouter); // Add class button selected
     var pushState = history.pushState(null, null, vRouter); // push url
 })
+// Run
+checkRouter();
