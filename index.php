@@ -38,10 +38,10 @@
 		<button class="nav-router" router='/'>Home</button>
 		<button class="nav-router" router='/about'>About</button>
 		<button class="nav-router" router='/contact'>Contact</button>
-		<form action='/search' method="get">
+		<form method="get">
 			<div>
 				<input type="text" name="q" id="q" value="<?php echo isset($_GET['q']) ?$_GET['q']: ''; ?>" tabindex="1" placeholder="Mày muốn tìm gì ?" />
-				<button>Send</button>
+				<button router='/search'>Send</button>
 			</div>
 		</form>
 	</nav>
