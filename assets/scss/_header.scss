@@ -9,6 +9,8 @@ $header_height: 50px;
 	font-size: .95em;
 	width: 100%;
 	border-radius: .25em;
+	background: #fff;
+	background-clip: padding-box;
 	border: 1px solid #b8b8b8;
 }
 %buttonLink {
@@ -31,8 +33,16 @@ header {
 		.navbar__brand {
 			@extend %flexCenter;
 			width: 60px;
-			color: #262626;
-			height: $header_height;
+			height: 37px;
+			color: #fff;
+			margin-right: 10px;
+			background: #010101;
+			border-radius: .25rem;
+			justify-content: center;
+			b {
+				// color: #f10c0a;
+				animation: gradiend 3s infinite;
+			}
 		}
 		.navbar__search {
 			@extend %flexCenter;
@@ -78,5 +88,25 @@ header {
 				}
 			}
 		}
+	}
+}
+@keyframes gradiend {
+	0% {
+		color: red;
+	}
+	20% {
+		color: orange;
+	}
+	40% {
+		color: yellow;
+	}
+	60% {
+		color: orange;
+	}
+	80% {
+		color: red;
+	}
+	100% {
+		color: yellow;
 	}
 }

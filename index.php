@@ -13,7 +13,7 @@
 	<header>
 		<nav class="navbar">
 			<div class="navbar__brand">
-				DEMO
+				<b>DE</b>MO
 			</div>
 			<div class="navbar__search">
 				<div class="navbar__search--box">

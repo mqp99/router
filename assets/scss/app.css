@@ -16,11 +16,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-p {
-  margin: 0;
-  margin-bottom: 1em;
-}
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0.5em 0;
 }
@@ -35,6 +30,8 @@ header .navbar .navbar__search--box .form-input {
   font-size: 0.95em;
   width: 100%;
   border-radius: 0.25em;
+  background: #fff;
+  background-clip: padding-box;
   border: 1px solid #b8b8b8;
 }
 
@@ -59,8 +56,15 @@ header .navbar {
 }
 header .navbar .navbar__brand {
   width: 60px;
-  color: #262626;
-  height: 50px;
+  height: 37px;
+  color: #fff;
+  margin-right: 10px;
+  background: #010101;
+  border-radius: 0.25rem;
+  justify-content: center;
+}
+header .navbar .navbar__brand b {
+  animation: gradiend 3s infinite;
 }
 header .navbar .navbar__search {
   width: 300px;
@@ -96,6 +100,30 @@ header .navbar .navbar__toggle .navbar__toggle--btn {
 }
 header .navbar .navbar__toggle .navbar__toggle--btn i {
   font-size: 1.3em;
+}
+
+@keyframes gradiend {
+  0% {
+    color: red;
+  }
+  20% {
+    color: orange;
+  }
+  40% {
+    color: yellow;
+  }
+  60% {
+    color: orange;
+  }
+  80% {
+    color: red;
+  }
+  100% {
+    color: yellow;
+  }
+}
+#app {
+  padding: 0 10px;
 }
 
 /** Mobile Responsive */
