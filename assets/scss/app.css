@@ -238,6 +238,9 @@ header .navbar .navbar__toggle .navbar__toggle--btn .btn-hamburger:after {
     display: block;
     opacity: 0;
   }
+  header .navbar .navbar__menu--item.current-router:before {
+    background: transparent;
+  }
   header .navbar .navbar__menu--item:nth-child(1) {
     animation: menuBar ease-in-out 500ms 100ms forwards;
   }

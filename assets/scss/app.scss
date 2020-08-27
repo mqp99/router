@@ -59,12 +59,16 @@ h1, h2, h3, h4, h5, h6 {
 						background: #fff;
 					}
 				}
+
 				&--item {
 					width: 100%;
 					padding: 15px 5px;
 					margin-left: 0;
 					display: block;
 					opacity: 0;
+					&.current-router:before {
+						background: transparent;
+					}
 					@for $i from 1 through 6 {
 						&:nth-child(#{$i}) {
 							animation: menuBar ease-in-out 500ms (100ms * $i) forwards;
