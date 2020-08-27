@@ -75,8 +75,28 @@ header {
 			height: $header_height;
 			&--item {
 				@extend %buttonLink;
+				position: relative;
+				/** CURRENT ROUTER */
 				&.current-router {
 					color: #8941ca;
+					&:before {
+						position: absolute;
+						content: '';
+						bottom: 0;
+						left: 50%;
+						width: 60%;
+						height: 2px;
+						background: #8941ca;
+						transition: .2s ease-in-out;
+						transform: translateX(-50%);
+					}
+					&:hover:before {
+						left: 0%;
+						width: 100%;
+						transform: translateX(0%);
+						border-bottom-left-radius: .25rem;
+						border-bottom-right-radius: .25rem;
+					}
 				}
 			}
 		}

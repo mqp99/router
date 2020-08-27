@@ -91,8 +91,30 @@ header .navbar .navbar__menu {
   justify-content: flex-end;
   height: 60px;
 }
+header .navbar .navbar__menu--item {
+  position: relative;
+  /** CURRENT ROUTER */
+}
 header .navbar .navbar__menu--item.current-router {
   color: #8941ca;
+}
+header .navbar .navbar__menu--item.current-router:before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  background: #8941ca;
+  transition: 0.2s ease-in-out;
+  transform: translateX(-50%);
+}
+header .navbar .navbar__menu--item.current-router:hover:before {
+  left: 0%;
+  width: 100%;
+  transform: translateX(0%);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 header .navbar .navbar__toggle {
   display: none;
