@@ -44,6 +44,7 @@ header .navbar .navbar__menu--item {
   font-size: 1em;
   cursor: pointer;
   margin-left: 5px;
+  text-align: center;
   padding: 10px 5px;
   white-space: nowrap;
   background: transparent;

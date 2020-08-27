@@ -69,7 +69,7 @@ $(function() {
     function router_EXIST(urlPathNameHandling) {
         $.each(MY_ROUTER.routers, function(index, router) {
             if (router.path === urlPathNameHandling) {
-                $(`[router='${urlPathNameHandling}']`).addClass('current-router');
+                $(`router[router='${urlPathNameHandling}']`).addClass('current-router');
                 $.ajax({
                     url: urlPage + router.url,
                     method: 'GET',
@@ -95,7 +95,7 @@ $(function() {
     }
     $(document).on('click', '.router-link', function() {
         var routerValue = $(this).attr('router');
-        $('button').removeClass('current-router');
+        $('router').removeClass('current-router');
         var pushState = history.pushState(null, null, routerValue);
         var routerLoad = router_EXIST(routerValue);
         setTimeout(() => {
@@ -104,8 +104,8 @@ $(function() {
         }, 300);
     })
     window.onpopstate = function(event) {
-        $('.router-link').removeClass('current-router');
-        $(`[router='${urlPathNameHandling}']`).removeClass('current-router');
+        $('router').removeClass('current-router');
+        $(`router[router='${urlPathNameHandling}']`).removeClass('current-router');
         router_EXIST(window.location.pathname);
     };
 })

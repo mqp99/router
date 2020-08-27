@@ -21,9 +21,9 @@
 				</div>
 			</div>
 			<div class="navbar__menu">
-				<button class="navbar__menu--item router-link" router='/about'>Giới thiệu</button>
-				<button class="navbar__menu--item router-link" router='/contact'>Liên hệ</button>
-				<button class="navbar__menu--item router-link" router='/signin'>Đăng nhập</button>
+				<router class="navbar__menu--item router-link" router='/about'>Giới thiệu</router>
+				<router class="navbar__menu--item router-link" router='/contact'>Liên hệ</router>
+				<router class="navbar__menu--item router-link" router='/signin'>Đăng nhập</router>
 			</div>
 			<div class="navbar__toggle">
 				<button class="navbar__toggle--btn">
