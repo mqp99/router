@@ -12,7 +12,7 @@ body {
   padding: 0;
   color: #262626;
   font-size: 1em;
-  background: #fff;
+  background: #eef0f1;
   font-family: "Roboto", sans-serif;
 }
 
@@ -56,10 +56,14 @@ header .navbar .navbar__menu--item:hover {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
   padding: 0 20px;
   background: #fff;
   height: 60px;
-  border-bottom: 1px solid #dedddd;
+  border-bottom: 1px solid #e6e8e8;
 }
 header .navbar {
   height: 59px;
@@ -106,7 +110,7 @@ header .navbar .navbar__menu--item.current-router:before {
   width: 60%;
   height: 2px;
   background: #8941ca;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s cubic-bezier(0.85, -0.01, 0.49, 0.93);
   transform: translateX(-50%);
 }
 header .navbar .navbar__menu--item.current-router:hover:before {
@@ -187,17 +191,14 @@ header .navbar .navbar__toggle .navbar__toggle--btn .btn-hamburger:after {
   }
 }
 #app {
+  position: absolute;
   padding: 0 10px;
+  top: 60px;
 }
 
 /** Mobile Responsive */
 @media (max-width: 739px) {
-  body {
-    background: #fff;
-  }
-
   header {
-    position: relative;
     padding: 0 10px;
   }
   header .navbar .navbar__brand {
@@ -207,17 +208,27 @@ header .navbar .navbar__toggle .navbar__toggle--btn .btn-hamburger:after {
     width: calc(100% - 110px);
   }
   header .navbar .navbar__menu {
-    display: none;
     position: absolute;
+    display: none;
     top: 60px;
     left: 0;
     width: 100%;
     height: auto;
+    z-index: 10;
     background: #fff;
     flex-direction: column;
   }
   header .navbar .navbar__menu--show {
     display: flex;
+  }
+  header .navbar .navbar__menu--show:before {
+    position: fixed;
+    content: "";
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
   }
   header .navbar .navbar__menu--item {
     width: 100%;

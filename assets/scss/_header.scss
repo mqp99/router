@@ -33,10 +33,14 @@ $header_height: 60px;
 	}
 }
 header {
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	width: 100%;
 	padding: 0 20px;
 	background: $header_bg;
 	height: $header_height;
-	border-bottom: 1px solid #dedddd;
+	border-bottom: 1px solid #e6e8e8;
 	.navbar {
 		@extend %flexCenter;
 		height: 59px;
@@ -87,7 +91,7 @@ header {
 						width: 60%;
 						height: 2px;
 						background: #8941ca;
-						transition: .2s ease-in-out;
+						transition: .3s cubic-bezier(0.85, -0.01, 0.49, 0.93);
 						transform: translateX(-50%);
 					}
 					&:hover:before {
