@@ -53,6 +53,7 @@ header {
 			@extend %flexCenter;
 			cursor: pointer;
 			width: 60px;
+			min-width: 60px;
 			height: 37px;
 			color: #fff;
 			margin-right: 10px;
@@ -89,7 +90,8 @@ header {
 				display: flex;
 				width: 35px;
 				height: 35px;
-				font-size: 1.1rem;
+				color: #222;
+				font-size: 1.3rem;
 				align-items: center;
 				justify-content: center;
 				/** CURRENT ROUTER */
@@ -156,7 +158,7 @@ header {
 				.btn-hamburger {
 					position: relative;
 					width: 100%;
-					height: 1px;
+					height: 2px;
 					background: #888;
 					transition: all .3s ease-in-out;
 					&:after,
@@ -165,7 +167,7 @@ header {
 						left: 0;
 						content: '';
 						width: 20px;
-						height: 1px;
+						height: 2px;
 						background: #888;
 					}
 					&:before {

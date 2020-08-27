@@ -22,8 +22,39 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0 10px;
 	top: 60px;
 }
+/** Tablet Responsive */
+@media (max-width: 500px) {
+	body {
+		// background: #999;
+	}
+	header .navbar .navbar__toggle .navbar__toggle--menu--show {
+		top: 60px;
+		box-shadow: none;
+	}
+	header .navbar .navbar__toggle .navbar__toggle--menu {
+		position: fixed;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 60px);
+		border-radius: 0;
+	}	
+	header {
+		padding: 0 10px;
+		.navbar {
+			.navbar__brand {
+				width: 55px;
+			}
+			.navbar__search {
+				width: calc(100% - 160px);
+			}
+			.navbar__menu {
+				width: 80px;
+			}
+		}
+	}
+}
 /** Mobile Responsive */
-@media (max-width: 739px) {
+@media (min-width: 501px) and (max-width: 799px) {
 	header {
 		padding: 0 10px;
 		.navbar {
@@ -93,25 +124,12 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 /** Tablet Responsive */
-@media (max-width: 500px) {
+@media (min-width: 800px) and (max-width: 1023px) {
 	body {
 		// background: #999;
 	}
-	header .navbar .navbar__toggle .navbar__toggle--menu--show {
-		top: 60px;
-	}
-	header .navbar .navbar__toggle .navbar__toggle--menu {
-		position: fixed;
-		left: 0;
-		width: 100%;
-		height: calc(100% - 60px);
-		border-radius: 0;
-	}
-}
-/** Tablet Responsive */
-@media (min-width: 501px) and (max-width: 1023px) {
-	body {
-		// background: #999;
+	header {
+		padding: 0 10px;
 	}
 }
 /** PC Responsive */
