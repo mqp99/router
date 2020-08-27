@@ -23,6 +23,7 @@
 			<div class="navbar__menu">
 				<button class="navbar__menu--item router-link" router='/about'>Giới thiệu</button>
 				<button class="navbar__menu--item router-link" router='/contact'>Liên hệ</button>
+				<button class="navbar__menu--item router-link" router='/signin'>Đăng nhập</button>
 			</div>
 			<div class="navbar__toggle">
 				<button class="navbar__toggle--btn">

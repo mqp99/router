@@ -41,6 +41,10 @@ $(function() {
         url: 'views/contact.php',
         title: 'Liên hệ'
     }, {
+        path: '/signin',
+        url: 'views/signin.php',
+        title: 'Đăng nhập'
+    }, {
         path: '/search',
         url: 'views/search.php?q='+urlHost.split('?q=')[1],
         title: 'Tìm kiếm'
@@ -65,12 +69,15 @@ $(function() {
     function router_EXIST(urlPathNameHandling) {
         $.each(MY_ROUTER.routers, function(index, router) {
             if (router.path === urlPathNameHandling) {
-                $.get(urlPage + router.url, function(data) {
-                    // document.title = 'Đang tải...';
-                    // document.querySelector('#app').innerHTML = '<p><i>Đang tải...</i></p>';
-                    document.title = router.title;
-                    document.querySelector('#app').innerHTML = data;
-                    $(`[router='${urlPathNameHandling}']`).addClass('current-router');
+                $(`[router='${urlPathNameHandling}']`).addClass('current-router');
+                $.ajax({
+                    url: urlPage + router.url,
+                    method: 'GET',
+                    dataType: 'text',
+                    success: function(data) {
+                        document.title = router.title;
+                        document.querySelector('#app').innerHTML = data;
+                    }
                 })
             }
         })
@@ -88,10 +95,10 @@ $(function() {
     }
     $(document).on('click', '.router-link', function() {
         var routerValue = $(this).attr('router');
-        var buttonRemove = $('.router-link').removeClass('current-router');
-        var routerLoad = router_EXIST(routerValue);
+        $('button').removeClass('current-router');
         var pushState = history.pushState(null, null, routerValue);
-        setTimeout(() => {$('.navbar__menu').removeClass('navbar__menu--show')}, 500);
+        var routerLoad = router_EXIST(routerValue);
+        setTimeout(() => {$('.navbar__menu').removeClass('navbar__menu--show')}, 300);
     })
     window.onpopstate = function(event) {
         $('.router-link').removeClass('current-router');
