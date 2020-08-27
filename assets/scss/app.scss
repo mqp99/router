@@ -64,6 +64,18 @@ h1, h2, h3, h4, h5, h6 {
 					padding: 15px 5px;
 					margin-left: 0;
 					display: block;
+					opacity: 0;
+					@for $i from 1 through 6 {
+						&:nth-child(#{$i}) {
+							animation: {
+								name: menuBar;
+								duration: 1000ms;
+								delay: 200ms * $i;
+								timing-function: ease-in-out;
+								fill-mode: forwards;
+							}
+						}
+					}
 				}
 			}
 			.navbar__toggle {
@@ -82,5 +94,21 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1024px) {
 	body {
 		// background: #999;
+	}
+}
+@keyframes menuBar {
+	0% {
+		opacity: .5;
+		background: #d8d8d8;
+		transform: rotateY(90deg) scale(.5) translateX(-100px);
+	}
+	50% {
+		opacity: 1;
+		background: #f8f8f8;
+		transform: rotateY(0deg) scale(1) translateY(0);
+	}
+	100% {
+		opacity: 1;
+		transform: rotateY(0deg) scale(1) translateY(0);
 	}
 }
