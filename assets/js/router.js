@@ -89,7 +89,8 @@ $(function() {
         $.each(MY_ROUTER.routers, function(index, router) {
             if (router.path !== urlPathNameHandling) {
                 document.title = 'Page not found';
-                document.body.innerHTML = `<img class='error' src='${urlPage}assets/imgs/404error.png'/>`;
+                document.body.innerHTML = `<h1>404 error!</h1>`;
+                //document.body.innerHTML = `<img class='error' src='${urlPage}assets/imgs/404error.png'/>`;
             }
         })
     }
