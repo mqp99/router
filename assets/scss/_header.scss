@@ -148,10 +148,10 @@ header {
 					.btn-hamburger {
 						transform: translateX(-50px);
 						&:before {
-							transform: rotate(45deg) translate(33px,-33px);
+							transform: rotate(45deg) translate(35px,-35px);
 						}
 						&:after {
-							transform: rotate(-45deg) translate(33px,33px);
+							transform: rotate(-45deg) translate(35px,35px);
 						}
 					}
 				}
@@ -213,7 +213,7 @@ header {
 						border-radius: .25rem;
 						i {
 							background: #8941ca1c;
-							border: 1px solid transpảent;
+							border: 1px solid #e8daf5;
 						}
 					}
 					img {

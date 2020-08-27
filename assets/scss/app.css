@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -166,10 +165,10 @@ header .navbar .navbar__toggle .navbar__toggle--btn.navbar__toggle--btn--active 
   transform: translateX(-50px);
 }
 header .navbar .navbar__toggle .navbar__toggle--btn.navbar__toggle--btn--active .btn-hamburger:before {
-  transform: rotate(45deg) translate(33px, -33px);
+  transform: rotate(45deg) translate(35px, -35px);
 }
 header .navbar .navbar__toggle .navbar__toggle--btn.navbar__toggle--btn--active .btn-hamburger:after {
-  transform: rotate(-45deg) translate(33px, 33px);
+  transform: rotate(-45deg) translate(35px, 35px);
 }
 header .navbar .navbar__toggle .navbar__toggle--btn .btn-hamburger {
   position: relative;
@@ -251,7 +250,7 @@ header .navbar .navbar__toggle .navbar__toggle--menu router.current-router {
 }
 header .navbar .navbar__toggle .navbar__toggle--menu router.current-router i {
   background: #8941ca1c;
-  border: 1px solid transpảent;
+  border: 1px solid #e8daf5;
 }
 header .navbar .navbar__toggle .navbar__toggle--menu router img {
   width: 60px;
