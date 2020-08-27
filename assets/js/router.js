@@ -98,7 +98,10 @@ $(function() {
         $('button').removeClass('current-router');
         var pushState = history.pushState(null, null, routerValue);
         var routerLoad = router_EXIST(routerValue);
-        setTimeout(() => {$('.navbar__menu').removeClass('navbar__menu--show')}, 300);
+        setTimeout(() => {
+            $('.navbar__menu').removeClass('navbar__menu--show');
+            $('.navbar__toggle--btn').removeClass('navbar__toggle--btn--active');
+        }, 300);
     })
     window.onpopstate = function(event) {
         $('.router-link').removeClass('current-router');
