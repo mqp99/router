@@ -1,6 +1,6 @@
 $('.navbar__toggle--btn').on('click', function () {
 	$(this).toggleClass('navbar__toggle--btn--active');
-	$('.navbar__menu').toggleClass('navbar__menu--show');
+	$('.navbar__toggle--menu').toggleClass('navbar__toggle--menu--show');
 })
 $('.navbar__search--box-input').on('keyup', function(e) {
 	if(e.keyCode == 13)
@@ -13,7 +13,7 @@ $('.navbar__search--box-input').on('keyup', function(e) {
 			success: function(response) {
 				$('#app').html(response);
 				$('.navbar__toggle--btn').removeClass('navbar__toggle--btn--active');
-				$('.navbar__menu').removeClass('navbar__menu--show');
+            	$('.navbar__toggle--menu').removeClass('navbar__toggle--menu--show');
 			}
 		})
 		console.log(vSearch);

@@ -21,14 +21,46 @@
 				</div>
 			</div>
 			<div class="navbar__menu">
-				<router class="navbar__menu--item router-link" router='/about'>Giới thiệu</router>
-				<router class="navbar__menu--item router-link" router='/contact'>Liên hệ</router>
-				<router class="navbar__menu--item router-link" router='/signin'>Đăng nhập</router>
+				<router class="navbar__menu--item router-link" router='/notifications'><i class="fal fa-bell"></i></router>
+				<router class="navbar__menu--item router-link" router='/create'><i class="fal fa-plus-hexagon"></i></router>
 			</div>
 			<div class="navbar__toggle">
 				<button class="navbar__toggle--btn">
 					<div class="btn-hamburger"></div>
 				</button>
+				<div class="navbar__toggle--menu">
+					<!-- <router>
+						<img src="assets/imgs/avt.jpg" alt="">
+						<div class="menu-avatar-right">
+							<div class="user-name">Minh Phạm</div>
+							<div class="user-view">Xem trang của bạn</div>
+						</div>
+					</router>
+					<router>
+						<i class="fal fa-cog"></i>
+						<div class="menu-body-right">
+							<div class="user-name">Cài đặt chung</div>
+						</div>
+					</router>
+					<router>
+						<i class="fal fa-sign-out"></i>
+						<div class="menu-body-right">
+							<div class="user-name">Đăng xuất</div>
+						</div>
+					</router> -->
+					<router class='router-link' router='/signup'>
+						<i class="fal fa-user-plus"></i>
+						<div class="menu-body-right">
+							<div class="user-name">Đăng ký</div>
+						</div>
+					</router>
+					<router class='router-link' router='/signin'>
+						<i class="fal fa-sign-in"></i>
+						<div class="menu-body-right">
+							<div class="user-name">Đăng nhập</div>
+						</div>
+					</router>
+				</div>
 			</div>
 		</nav>
 	</header>

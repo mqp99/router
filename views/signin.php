@@ -1,2 +1,2 @@
 <h1>Đăng nhập</h1>
-<p>This is a signing page</p>
+<p>This is a page singin</p>

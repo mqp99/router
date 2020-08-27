@@ -33,17 +33,21 @@ $(function() {
         url: 'views/home.php',
         title: 'Trang chủ'
     }, {
-        path: '/about',
-        url: 'views/about.php',
-        title: 'Giới thiệu'
+        path: '/notifications',
+        url: 'views/notifications.php',
+        title: 'Thông báo'
     }, {
-        path: '/contact',
-        url: 'views/contact.php',
-        title: 'Liên hệ'
+        path: '/signup',
+        url: 'views/signup.php',
+        title: 'Đăng ký'
     }, {
         path: '/signin',
         url: 'views/signin.php',
         title: 'Đăng nhập'
+    }, {
+        path: '/create',
+        url: 'views/create.php',
+        title: 'Tạo'
     }, {
         path: '/search',
         url: 'views/search.php?q='+urlHost.split('?q=')[1],
@@ -100,7 +104,7 @@ $(function() {
         var pushState = history.pushState(null, null, routerValue);
         var routerLoad = router_EXIST(routerValue);
         setTimeout(() => {
-            $('.navbar__menu').removeClass('navbar__menu--show');
+            $('.navbar__toggle--menu').removeClass('navbar__toggle--menu--show');
             $('.navbar__toggle--btn').removeClass('navbar__toggle--btn--active');
         }, 300);
     })
