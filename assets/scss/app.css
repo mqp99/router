@@ -97,6 +97,7 @@ header .navbar .navbar__menu--item.current-router {
 header .navbar .navbar__toggle {
   display: none;
   height: 35px;
+  margin-left: 5px;
 }
 header .navbar .navbar__toggle .navbar__toggle--btn {
   cursor: pointer;
@@ -105,7 +106,6 @@ header .navbar .navbar__toggle .navbar__toggle--btn {
   height: 35px;
   border: none;
   overflow: hidden;
-  margin-left: 5px;
   background: transparent;
   /*i {
   	font-size: 1.3em;
