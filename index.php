@@ -27,7 +27,7 @@
 			</div>
 			<div class="navbar__toggle">
 				<button class="navbar__toggle--btn">
-					<i class="fal fa-bars"></i>
+					<div class="btn-hamburger"></div>
 				</button>
 			</div>
 		</nav>

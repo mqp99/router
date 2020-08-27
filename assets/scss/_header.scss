@@ -11,7 +11,7 @@ $header_height: 60px;
 	border-radius: .25em;
 	background: #fff;
 	background-clip: padding-box;
-	border: 1px solid #b8b8b8;
+	border: 1px solid #d8d6d6;
 	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 	&:focus {
 		border-color: #8941ca;
@@ -82,17 +82,51 @@ header {
 		}
 		.navbar__toggle {
 			display: none;
-			height: 40px;
+			height: 35px;
 			.navbar__toggle--btn {
-				display: flex;
-				width: 40px;
-				height: 40px;
-				align-items: center;
-				flex-direction: column;
 				@extend %buttonLink;
-				i {
-					font-size: 1.3em;
+				width: 40px;
+				height: 35px;
+				overflow: hidden;
+				// border: 1px solid #888;
+				&.navbar__toggle--btn--active {
+					.btn-hamburger {
+						transform: translateX(-50px);
+						&:before {
+							transform: rotate(45deg) translate(35px,-35px);
+						}
+						&:after {
+							transform: rotate(-45deg) translate(35px,35px);
+						}
+					}
 				}
+				.btn-hamburger {
+					position: relative;
+					width: 100%;
+					height: 1px;
+					background: #888;
+					transition: all .3s ease-in-out;
+					&:after,
+					&:before {
+						position: absolute;
+						left: 0;
+						content: '';
+						width: 100%;
+						height: 1px;
+						background: #888;
+					}
+					&:before {
+						transition: all .3s ease-in-out;
+						transform: translateY(-10px);
+					}
+					&:after {
+						transition: all .3s ease-in-out;
+						transform: translateY(10px);
+					}
+				}
+				/*i {
+					font-size: 1.3em;
+				}*/
 			}
 		}
 	}
