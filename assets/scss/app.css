@@ -182,7 +182,7 @@ header .navbar .navbar__toggle .navbar__toggle--btn .btn-hamburger:after {
     width: 55px;
   }
   header .navbar .navbar__search {
-    width: calc(100% - 100px);
+    width: calc(100% - 110px);
   }
   header .navbar .navbar__menu {
     display: none;
