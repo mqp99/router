@@ -67,13 +67,14 @@ h1, h2, h3, h4, h5, h6 {
 					opacity: 0;
 					@for $i from 1 through 6 {
 						&:nth-child(#{$i}) {
-							animation: {
-								name: menuBar;
-								duration: 1000ms;
-								delay: 200ms * $i;
-								timing-function: ease-in-out;
-								fill-mode: forwards;
-							}
+							animation: menuBar ease-in-out 1000ms (200ms * $i);
+							// animation: {
+							// 	name: menuBar;
+							// 	duration: 1000ms;
+							// 	delay: 200ms * $i;
+							// 	timing-function: ease-in-out;
+							// 	fill-mode: forwards;
+							// }
 						}
 					}
 				}
