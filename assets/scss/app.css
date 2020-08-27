@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -194,7 +195,7 @@ header .navbar .navbar__toggle .navbar__toggle--btn .btn-hamburger:after {
 header .navbar .navbar__toggle .navbar__toggle--menu {
   position: absolute;
   right: 0;
-  top: 98px;
+  top: 68px;
   width: 300px;
   padding: 10px;
   opacity: 0;
@@ -248,6 +249,7 @@ header .navbar .navbar__toggle .navbar__toggle--menu router.current-router {
 }
 header .navbar .navbar__toggle .navbar__toggle--menu router.current-router i {
   background: #8941ca1c;
+  border: 1px solid transpảent;
 }
 header .navbar .navbar__toggle .navbar__toggle--menu router img {
   width: 60px;
@@ -257,7 +259,10 @@ header .navbar .navbar__toggle .navbar__toggle--menu router img {
   border-radius: 50%;
 }
 header .navbar .navbar__toggle .navbar__toggle--menu router i {
-  padding: 10px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
   border-radius: 50px;
   background: #e5e5e5;
   border: 1px solid #e5e5e5;

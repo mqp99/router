@@ -181,7 +181,7 @@ header {
 			.navbar__toggle--menu {
 				position: absolute;
 				right: 0;
-				top: 98px;
+				top: 68px;
 				width: 300px;
 				padding: 10px;
 				opacity: 0;
@@ -211,6 +211,7 @@ header {
 						border-radius: .25rem;
 						i {
 							background: #8941ca1c;
+							border: 1px solid transpảent;
 						}
 					}
 					img {
@@ -221,7 +222,10 @@ header {
 						border-radius: 50%;
 					}
 					i {
-						padding: 10px;
+						width: 40px;
+						height: 40px;
+						line-height: 40px;
+						text-align: center;
 						border-radius: 50px;
 						background: #e5e5e5;
 						border: 1px solid #e5e5e5;
