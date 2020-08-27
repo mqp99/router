@@ -12,6 +12,8 @@ $('.navbar__search--box-input').on('keyup', function(e) {
 			data: { q: vSearch },
 			success: function(response) {
 				$('#app').html(response);
+				$('.navbar__toggle--btn').removeClass('navbar__toggle--btn--active')
+				$('.navbar__menu').removeClass('navbar__menu--show');
 			}
 		})
 		console.log(vSearch);
