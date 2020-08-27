@@ -83,14 +83,13 @@ header {
 		.navbar__toggle {
 			display: none;
 			height: 35px;
-			margin-left: 5px;
+			margin-left: 10px;
 			.navbar__toggle--btn {
 				cursor: pointer;
-				width: 40px;
+				width: 32px;
 				padding: 0;
 				height: 35px;
 				border: none;
-				min-width: 40px;
 				overflow: hidden;
 				background: transparent;
 				// border: 1px solid #888;
@@ -98,16 +97,16 @@ header {
 					.btn-hamburger {
 						transform: translateX(-50px);
 						&:before {
-							transform: rotate(45deg) translate(35px,-35px);
+							transform: rotate(45deg) translate(33px,-33px);
 						}
 						&:after {
-							transform: rotate(-45deg) translate(35px,35px);
+							transform: rotate(-45deg) translate(33px,33px);
 						}
 					}
 				}
 				.btn-hamburger {
 					position: relative;
-					width: 40px;
+					width: 100%;
 					height: 1px;
 					background: #888;
 					transition: all .3s ease-in-out;
@@ -116,7 +115,7 @@ header {
 						position: absolute;
 						left: 0;
 						content: '';
-						width: 40px;
+						width: 32px;
 						height: 1px;
 						background: #888;
 					}
