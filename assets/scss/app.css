@@ -239,22 +239,22 @@ header .navbar .navbar__toggle .navbar__toggle--btn .btn-hamburger:after {
     opacity: 0;
   }
   header .navbar .navbar__menu--item:nth-child(1) {
-    animation: menuBar ease-in-out 500ms 200ms forwards;
+    animation: menuBar ease-in-out 500ms 100ms forwards;
   }
   header .navbar .navbar__menu--item:nth-child(2) {
-    animation: menuBar ease-in-out 500ms 400ms forwards;
+    animation: menuBar ease-in-out 500ms 200ms forwards;
   }
   header .navbar .navbar__menu--item:nth-child(3) {
-    animation: menuBar ease-in-out 500ms 600ms forwards;
+    animation: menuBar ease-in-out 500ms 300ms forwards;
   }
   header .navbar .navbar__menu--item:nth-child(4) {
-    animation: menuBar ease-in-out 500ms 800ms forwards;
+    animation: menuBar ease-in-out 500ms 400ms forwards;
   }
   header .navbar .navbar__menu--item:nth-child(5) {
-    animation: menuBar ease-in-out 500ms 1000ms forwards;
+    animation: menuBar ease-in-out 500ms 500ms forwards;
   }
   header .navbar .navbar__menu--item:nth-child(6) {
-    animation: menuBar ease-in-out 500ms 1200ms forwards;
+    animation: menuBar ease-in-out 500ms 600ms forwards;
   }
   header .navbar .navbar__toggle {
     display: block;
@@ -264,17 +264,17 @@ header .navbar .navbar__toggle .navbar__toggle--btn .btn-hamburger:after {
 /** PC Responsive */
 @keyframes menuBar {
   0% {
-    opacity: 0.5;
+    opacity: 1;
     background: #d8d8d8;
-    transform: rotateY(90deg) scale(0.3) translateX(-100px);
+    transform: scale(0.3) translateX(-200px);
   }
   50% {
     opacity: 1;
     background: #f8f8f8;
-    transform: rotateY(45deg) scale(0.7) translateX(-50px);
+    transform: scale(0.7) translateX(-100px);
   }
   100% {
     opacity: 1;
-    transform: rotateY(0deg) scale(1) translateX(0);
+    transform: scale(1) translateX(0);
   }
 }
