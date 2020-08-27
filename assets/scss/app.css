@@ -102,9 +102,10 @@ header .navbar .navbar__toggle {
 header .navbar .navbar__toggle .navbar__toggle--btn {
   cursor: pointer;
   width: 40px;
-  min-width: 40px;
+  padding: 0;
   height: 35px;
   border: none;
+  min-width: 40px;
   overflow: hidden;
   background: transparent;
   /*i {
@@ -122,7 +123,7 @@ header .navbar .navbar__toggle .navbar__toggle--btn.navbar__toggle--btn--active 
 }
 header .navbar .navbar__toggle .navbar__toggle--btn .btn-hamburger {
   position: relative;
-  width: 100%;
+  width: 40px;
   height: 1px;
   background: #888;
   transition: all 0.3s ease-in-out;
@@ -131,7 +132,7 @@ header .navbar .navbar__toggle .navbar__toggle--btn .btn-hamburger:after, header
   position: absolute;
   left: 0;
   content: "";
-  width: 100%;
+  width: 40px;
   height: 1px;
   background: #888;
 }
