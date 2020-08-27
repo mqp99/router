@@ -84,10 +84,13 @@ header {
 			display: none;
 			height: 35px;
 			.navbar__toggle--btn {
-				@extend %buttonLink;
+				cursor: pointer;
 				width: 40px;
 				height: 35px;
+				border: none;
 				overflow: hidden;
+				margin-left: 5px;
+				background: transparent;
 				// border: 1px solid #888;
 				&.navbar__toggle--btn--active {
 					.btn-hamburger {
