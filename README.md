@@ -34,6 +34,10 @@ Build the <b>SINGLE PAGE APPLICATION</b> easy
             }
          ]);
          ROUTER.getRouter();
+         $('router').on('click',function () {
+            valuePath = $(this).attr('link'); <b>/** Get path */</b>
+            router.render(valuePath); <b>/** Find path and load content to #app */</b>
+         })
     &lt;/script&gt;
   &lt;/body&gt;
   &lt;/html&gt;
