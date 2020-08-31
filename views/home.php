@@ -1,2 +1,1 @@
-<h1>Trang chủ</h1>
-<p>This is home page</p>
+<h1>Hello this is first Router</h1>
