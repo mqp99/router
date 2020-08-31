@@ -18,7 +18,7 @@ Build the <b>SINGLE PAGE APPLICATION</b> easy
     &lt;/nav&gt;
     &lt;div id="app"&gt;&lt;/div&gt;
     &lt;script src="https://code.jquery.com/jquery-3.5.1.min.js"&gt;&lt;/script&gt;
-    &lt;script src="https://mqp99.github.io/cdn/router/router.class.js"&gt;&lt;/script&gt;
+    &lt;script src="https://mqp99.github.io/router/router.class.min.js"&gt;&lt;/script&gt;
     &lt;script&gt;
       var app = document.querySelector('#app');
       var ROUTER = new Router(app);
