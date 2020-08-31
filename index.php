@@ -17,7 +17,7 @@
 	</nav>
 	<div id="app"></div>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<script src="router.class.js"></script>
+	<script src="router.class.min.js"></script>
 	<script type="text/javascript">
 		var router = new Router(document.querySelector('#app'));
 			router.setRouter([
